@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient">
+
+        <TextView
+            android:id="@+id/player_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:fontFamily="@font/secular_one"
+            android:text="2"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/cell1"
+            app:layout_constraintEnd_toEndOf="@id/cell1"
+            app:layout_constraintStart_toStartOf="@id/cell1" />
+
+        <TextView
+            android:id="@+id/computer_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/secular_one"
+            android:text="2"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@id/player_score"
+            app:layout_constraintEnd_toEndOf="@id/cell3"
+            app:layout_constraintStart_toStartOf="@id/cell3" />
+
+        <TextView
+            android:id="@+id/cell1"
+            style="@style/cell"
+            android:layout_marginEnd="10dp"
+            android:text="X"
+            android:textColor="#00FE3F"
+            app:layout_constraintBottom_toBottomOf="@id/cell2"
+            app:layout_constraintEnd_toStartOf="@id/cell2"
+            app:layout_constraintTop_toTopOf="@id/cell2" />
+
+        <TextView
+            android:id="@+id/cell2"
+            style="@style/cell"
+            android:layout_marginBottom="10dp"
+            android:text="O"
+            android:textColor="#FE0016"
+            app:layout_constraintBottom_toTopOf="@id/cell5"
+            app:layout_constraintEnd_toEndOf="@id/cell5"
+            app:layout_constraintStart_toStartOf="@id/cell5" />
+
+        <TextView
+            android:id="@+id/cell3"
+            style="@style/cell"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="@id/cell2"
+            app:layout_constraintStart_toEndOf="@id/cell2"
+            app:layout_constraintTop_toTopOf="@id/cell2" />
+
+        <TextView
+            android:id="@+id/cell4"
+            style="@style/cell"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="@id/cell5"
+            app:layout_constraintEnd_toStartOf="@id/cell5"
+            app:layout_constraintTop_toTopOf="@id/cell5" />
+
+        <TextView
+            android:id="@+id/cell5"
+            style="@style/cell"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.75" />
+
+        <TextView
+            android:id="@+id/cell6"
+            style="@style/cell"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="@id/cell5"
+            app:layout_constraintStart_toEndOf="@id/cell5"
+            app:layout_constraintTop_toTopOf="@id/cell5" />
+
+        <TextView
+            android:id="@+id/cell7"
+            style="@style/cell"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="@id/cell8"
+            app:layout_constraintEnd_toStartOf="@id/cell8"
+            app:layout_constraintTop_toTopOf="@id/cell8" />
+
+        <TextView
+            android:id="@+id/cell8"
+            style="@style/cell"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="@id/cell5"
+            app:layout_constraintStart_toStartOf="@id/cell5"
+            app:layout_constraintTop_toBottomOf="@id/cell5" />
+
+        <TextView
+            android:id="@+id/cell9"
+            style="@style/cell"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="@id/cell8"
+            app:layout_constraintStart_toEndOf="@id/cell8"
+            app:layout_constraintTop_toTopOf="@id/cell8" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
